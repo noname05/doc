@@ -7,7 +7,7 @@
 
 ```
 server {  
-        **client_max_body_size 300M;**  
+        client_max_body_size 300M;  
         listen 80 default_server;  
         listen [::]:80 default_server;  
 
