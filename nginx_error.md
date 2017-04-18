@@ -3,9 +3,9 @@
 워드프레스에 동영상 파일을 업록드 하는데 자꾸 http 에러가 난다. PHP에 설정한 용량보다 작은데도 그렇다.  
 원인은 nginx 설정에 있었다. nginx에서도 업로드 용량을 설정해줘야 한다.  
 
-/etc/nginx/sites-available/default에 **client_max_body_size 000M;**를 추가해주고, nginx를 재시작 한다.  
+/etc/nginx/sites-available/default에 client_max_body_size 000M;를 추가해주고, nginx를 재시작 한다.  
 
-
+```
 server {  
         **client_max_body_size 300M;**  
         listen 80 default_server;  
@@ -31,3 +31,4 @@ server {
   
         # Add index.php to the list if you are using PHP  
         index index.html index.htm index.nginx-debian.html index.php;  
+```
